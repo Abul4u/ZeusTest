@@ -1,0 +1,115 @@
+html,
+body {
+    margin: 0;
+    color: #444;
+    box-sizing: border-box;
+}
+
+.spinner-box{
+    text-align: center;
+    padding: 15px;
+}
+
+.spinner-div{
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 5px 7px #005050;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.spinner {
+    width: 250px;
+    height: 250px;
+    transform-origin: 50% 50%;
+}
+
+
+/* center or hub  */
+
+.spinner-center {
+    transform-origin: 114px 116px 0;
+}
+
+/* ----- spinner piece ----- */
+
+.spinner-piece-color1 {
+    fill: #baf4ee;
+}
+
+.spinner-piece-color2 {
+    fill: #4ed4c6;
+}
+
+.spinner-piece-color3 {
+    fill: #7eded4;
+}
+
+/* ----- end spinner piece ----- */
+
+
+
+/* rim circle -  for shadow   ._opp */
+
+.spinner-shadow {
+    cursor: pointer;
+    
+}
+
+.spinner-piece {}
+
+
+/* ----- text path ----- */
+
+.spinner-text-path {
+    fill: none;
+}
+
+.spinner text {
+    fill: #006064;
+    text-anchor: middle;
+}
+
+.spinner text,
+.spinner textPath {
+    font: 500 12px Tahoma, serif;
+    stroke: #006064;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* ----- End text path ----- */
+
+/* ----- Buttons ----- */
+.select-box{
+    text-align: left;
+}
+
+.select-box select{
+    width: 100px;
+    padding: 5px;    
+    color: #333;
+    font-size: 15px;
+}
+
+.select-box select option{
+    font-size: 13px;
+}
+
+/* ----- Buttons ----- */
+.buttons button{
+    width: 100%;
+    line-height: 1.5;
+    color: #333;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #e6e6e6;
+    border-color: transparent;
+    width: 100%;
+    margin: 10px 0; 
+    box-shadow: 0 3px 5px #8c8787;
+}
+
+
+

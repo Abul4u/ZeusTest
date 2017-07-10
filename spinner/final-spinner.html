@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="css/spinner.css" type="text/css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="js/d3-transform.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-transform/1.0.4/d3-transform.min.js"></script>-->
+
+</head>
+
+<body>
+
+
+    <div class="spinner-box">
+        <div class="select-box">
+            <select id="select-number" class="spinner-number" onchange="init()">
+                <option value="2">2 Numbers</option>
+                <option value="3">3 Numbers</option>
+                <option value="4">4 Numbers</option>
+                <option value="5">5 Numbers</option>
+                <option value="6">6 Numbers</option>
+                <option value="7">7 Numbers</option>
+                <option value="8">8 Numbers</option>
+                <option value="9">9 Numbers</option>
+                <option value="10" selected>10 Numbers</option>
+                <option value="11">11 Numbers</option>
+                <option value="12">12 Numbers</option>
+            </select>
+        </div>
+        <div id="spinner-div" class="spinner-div"></div>
+        <!--<svg class="spinner spinner-shadow" id="spinner">
+
+        </svg>-->
+        <div class="buttons">
+            <button id="spin">Spin</button>
+        </div>
+    </div>
+
+
+
+    <!--<div class="spinner-rim spinner-rim-shadow">
+        <svg class="spinner" id="spinner" style="transform: translateZ(0px) rotate(13.5455rad);">
+            <g class="spinner-center">
+                <g class="">
+                    <path d="M116 0 A 116 116 0 0 1 184 22 L 116 116 Z" class="spinner-piece spinner-piece-color1"></path>
+                    <path d="M116 41 A 75.4 75.4 0 0 1 160 55" class="spinner-text-path" id="textPath0"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath0">1</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M184 22 A 116 116 0 0 1 226 80 L 116 116 Z" class="spinner-piece spinner-piece-color2"></path>
+                    <path d="M160 55 A 75.4 75.4 0 0 1 188 93" class="spinner-text-path" id="textPath1"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath1">2</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M226 80 A 116 116 0 0 1 226 152 L 116 116 Z" class="spinner-piece spinner-piece-color1"></path>
+                    <path d="M188 93 A 75.4 75.4 0 0 1 188 139" class="spinner-text-path" id="textPath2"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath2">3</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M226 152 A 116 116 0 0 1 184 210 L 116 116 Z" class="spinner-piece spinner-piece-color2"></path>
+                    <path d="M188 139 A 75.4 75.4 0 0 1 160 177" class="spinner-text-path" id="textPath3"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath3">4</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M184 210 A 116 116 0 0 1 116 232 L 116 116 Z" class="spinner-piece spinner-piece-color1"></path>
+                    <path d="M160 177 A 75.4 75.4 0 0 1 116 191" class="spinner-text-path" id="textPath4"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath4">5</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M116 232 A 116 116 0 0 1 48 210 L 116 116 Z" class="spinner-piece spinner-piece-color2"></path>
+                    <path d="M116 191 A 75.4 75.4 0 0 1 72 177" class="spinner-text-path" id="textPath5"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath5">6</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M48 210 A 116 116 0 0 1 6 152 L 116 116 Z" class="spinner-piece spinner-piece-color1"></path>
+                    <path d="M72 177 A 75.4 75.4 0 0 1 44 139" class="spinner-text-path" id="textPath6"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath6">7</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M6 152 A 116 116 0 0 1 6 80 L 116 116 Z" class="spinner-piece spinner-piece-color2"></path>
+                    <path d="M44 139 A 75.4 75.4 0 0 1 44 93" class="spinner-text-path" id="textPath7"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath7">8</textPath>
+                    </text>
+                </g>
+                <g class="     gws-csf-spinner__dark-result-highlight">
+                    <path d="M6 80 A 116 116 0 0 1 48 22 L 116 116 Z" class="spinner-piece spinner-piece-color1"></path>
+                    <path d="M44 93 A 75.4 75.4 0 0 1 72 55" class="spinner-text-path" id="textPath8"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath8">9</textPath>
+                    </text>
+                </g>
+                <g>
+                    <path d="M48 22 A 116 116 0 0 1 116 0 L 116 116 Z" class="spinner-piece spinner-piece-color2"></path>
+                    <path d="M72 55 A 75.4 75.4 0 0 1 116 41" class="spinner-text-path" id="textPath9"></path>
+                    <text>
+                        <textPath startOffset="50%" xlink:href="#textPath9">10</textPath>
+                    </text>
+                </g>
+            </g>
+            <circle class="_tpp" cx="116px" cy="116px" r="6px"></circle>
+        </svg>
+
+    </div>-->
+
+
+    <script src="js/spinner.js"></script>
+
+</body>
+
+</html>
